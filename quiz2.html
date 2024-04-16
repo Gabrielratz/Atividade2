@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+    <script>
+        msg1= " "
+        msg2= " "
+        msg3= " "
+
+        window.onload = function(){
+            document.getElementById("botao").onclick = function(){
+                validarRespostas()
+            }
+        }
+        function validarRespostas(){
+            var escolha = document.getElementById("escolha").value
+            var escolha2= document.getElementById("escolha2").value
+            var escolha3= document.getElementById("escolha3").value
+
+            
+            if (escolha == "b"){
+                msg1= "Você acertou a primeira questão"
+            }
+            else{
+                msg1= "Você errou"
+            }
+            if (escolha2 == "d"){
+                msg2= "Você acertou a segunda questão"
+            }
+            else{
+                msg2= "Você errou"
+            }
+            if (escolha3=="d"){
+                msg3= "Você acertou a terceira questão"
+            }
+            else{
+                msg3= "Você errou"
+            }
+            document.getElementById("resul").value= msg1 
+            document.getElementById("resul2").value = msg2
+            document.getElementById("resul3").value = msg3
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">HTML/CSS/JAVASCRIPT</a>
+        <A href="quiz2.html">Programação Orientada a Objeto</A>
+        <a href="quiz3.html">Banco de dados</a>
+    </nav>
+    <h1>Quiz sobre Programação Orientada a Objetos</h1>
+    <form>
+        <label for="escolha">Qual marcação é usada no código para informar a presença de sobrescrita de métodos?</label>
+        <select id="escolha">
+
+            <option value="a">A- Overload</option>
+            <option value="b">B- Override</option>
+            <option value="c">C- Loadwrite </option>
+            <option value="d">D- Overwrite </option>
+            
+            
+        </select>
+    </form><br>
+    <label for="escolha">No Paradigma Orientado a Objetos, o princípio de buscar esconder os detalhes de implementação de funcionalidades e aspectos que não são essenciais para a abstração de um objeto é denominado:</label>
+        <select id="escolha2">
+
+            <option value="a1">A - Sobrecarga</option>
+            <option value="b1">B - Confidencialidade</option>
+            <option value="c1">C - Herança</option>
+            <option value="d1">D - Encapsulamento</option>
+            
+            
+        </select>
+    </form><br><br>
+    <label for="escolha">O java permite que você tenha métodos com o mesmo nome e parâmetros idênticos, mas alterando em seu corpo, ou seja, em seu código, de acordo com a necessidade. Isso diz respeito a:</label>
+        <select id="escolha3">
+
+            <option value="a2">A - Encapsulamento </option>
+            <option value="b2">B - Abstração</option>
+            <option value="c2">C - Sobrecarga</option>
+            <option value="d2">D - Sobreescrita</option>
+            
+            
+            
+        </select>
+    </form> <br> <br>
+<form>
+    <input type="button" value="Conferir" id="botao"><br>
+    <input type="text" id="resul" onlyread> <br>
+    <input type="text" id="resul2" onlyread><br>
+    <input type="text" id="resul3" onlyread>
+</form>
+    
+
+</body>
+
+
+
+
+</html>

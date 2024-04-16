@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+    <script>
+        msg1= " "
+        msg2= " "
+        msg3= " "
+
+        window.onload = function(){
+            document.getElementById("botao").onclick = function(){
+                validarRespostas()
+            }
+        }
+        function validarRespostas(){
+            var escolha = document.getElementById("escolha").value
+            var escolha2= document.getElementById("escolha2").value
+            var escolha3= document.getElementById("escolha3").value
+
+            
+            if (escolha == "b"){
+                msg1= "Você acertou a primeira questão"
+            }
+            else{
+                msg1= "Você errou"
+            }
+            if (escolha2 == "c"){
+                msg2= "Você acertou a segunda questão"
+            }
+            else{
+                msg2= "Você errou"
+            }
+            if (escolha3=="a"){
+                msg3= "Você acertou a terceira questão"
+            }
+            else{
+                msg3= "Você errou"
+            }
+            document.getElementById("resul").value= msg1 
+            document.getElementById("resul2").value = msg2
+            document.getElementById("resul3").value = msg3
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">HTML/CSS/JAVASCRIPT</a>
+        <A href="quiz2.html">Programação Orientada a Objeto</A>
+        <a href="quiz3.html">Banco de dados</a>
+    </nav>
+    <h1>Quiz sobre Banco de Dados</h1>
+    <form>
+        <label for="escolha">No Sistema ___________ o computador pessoal é o hospedeiro do SGBD e o cliente ao mesmo tempo.</label>
+        <select id="escolha">
+
+            <option value="a">A- Cliente- Servidor N camadas</option>
+            <option value="b">B- Cliente Servidor</option>
+            <option value="c">C- Computador Pessoal</option>
+            <option value="d">D- Banco de dados distribuídos</option>
+            
+            
+        </select>
+    </form><br>
+    <label for="escolha">No Sistema _________ o cliente executa as tarefas do aplicativo (interface gráfica), e o servidor executa o SGBD.</label>
+        <select id="escolha2">
+
+            <option value="a1">A - Cliente-Servidor N camadas</option>
+            <option value="b1">B - Computador Pessoal</option>
+            <option value="c1">C - Cliente-Servidor</option>
+            <option value="d1">D - Plataformas Centralizadas</option>
+            
+            
+        </select>
+    </form><br><br>
+    <label for="escolha">No Sistema ___________ a informação está distribuída em diversos servidores espalhados em locais diferentes.</label>
+        <select id="escolha3">
+
+            <option value="a2">A - Banco de dados distribuídos</option>
+            <option value="b2">B - Cliente-Servidor</option>
+            <option value="c2">C - Operacional</option>
+            <option value="d2">D - Cliente-Servidor N camadas</option>
+            
+            
+            
+        </select>
+    </form> <br> <br>
+<form>
+    <input type="button" value="Conferir" id="botao"><br>
+    <input type="text" id="resul" onlyread> <br>
+    <input type="text" id="resul2" onlyread><br>
+    <input type="text" id="resul3" onlyread>
+</form>
+    
+
+</body>
+
+
+
+</html>

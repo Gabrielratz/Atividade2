@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    
+    <script>
+        msg1= " "
+        msg2= " "
+        msg3= " "
+
+        window.onload = function(){
+            document.getElementById("botao").onclick = function(){
+                validarRespostas()
+            }
+        }
+        function validarRespostas(){
+            var escolha = document.getElementById("escolha").value
+            var escolha2= document.getElementById("escolha2").value
+            var escolha3= document.getElementById("escolha3").value
+
+            
+            if (escolha == "a"){
+                msg1= "Você acertou a primeira questão"
+            }
+            else{
+                msg1= "Você errou"
+            }
+            if (escolha2 == "b"){
+                msg2= "Você acertou a segunda questão"
+            }
+            else{
+                msg2= "Você errou"
+            }
+            if (escolha3=="d"){
+                msg3= "Você acertou a terceira questão"
+            }
+            else{
+                msg3= "Você errou"
+            }
+            document.getElementById("resul").value= msg1 
+            document.getElementById("resul2").value = msg2
+            document.getElementById("resul3").value = msg3
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">HTML/CSS/JAVASCRIPT</a>
+        <A href="quiz2.html">Programação Orientada a Objeto</A>
+        <a href="quiz3.html">Banco de dados</a>
+    </nav>
+    <h1>Quiz sobre HTML, CSS e JavaScript</h1>
+    <form>
+        <label for="escolha">O que significa HTML?</label>
+        <select id="escolha">
+
+            <option value="a">A- Hyper Text Markup Language</option>
+            <option value="b">B- Hyperlink and Text Markup Language</option>
+            <option value="c">C- Hyper Text Manipulation Language</option>
+            <option value="d">D- Hyper Transfer Markup Language</option>
+            
+            
+        </select>
+    </form><br>
+    <label for="escolha">Qual a função do CSS?</label>
+        <select id="escolha2">
+
+            <option value="a1">A - Conectar a página web ao servidor</option>
+            <option value="b1">B - Estilizar a página web</option>
+            <option value="c1">C - Definir o comportamento dinânico de uma app web</option>
+            <option value="d1">D - Manipular dados em um banco de dados</option>
+            
+            
+        </select>
+    </form><br><br>
+    <label for="escolha">Qual a função do JavaScript?</label>
+        <select id="escolha3">
+
+            <option value="a2">A - Definir estilos e layout da página</option>
+            <option value="b2">B - Manipular a estrutura do documento HTML</option>
+            <option value="c2">C - Realizar cálculos matemáticos no lado do servidor</option>
+            <option value="d2">D - Adicionar interatividade e comportamento dinâmico</option>
+            
+            
+            
+        </select>
+    </form> <br> <br>
+<form>
+    <input type="button" value="Conferir" id="botao"><br>
+    <input type="text" id="resul" onlyread> <br>
+    <input type="text" id="resul2" onlyread><br>
+    <input type="text" id="resul3" onlyread>
+</form>
+    
+
+</body>
+
+
+
+</html>
